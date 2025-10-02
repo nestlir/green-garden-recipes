@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #4CAF50;
+    --primary-light: #8BC34A;
+    --primary-dark: #388E3C;
+    --secondary: #66BB6A;
+    --light: #F1F8E9;
+    --dark: #2E7D32;
+    --text: #333;
+    --white: #FFFFFF;
+    --gray: #F5F5F5;
+}
+
+body {
+    background: linear-gradient(135deg, var(--light), #E8F5E9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--text);
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 0.8s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.app-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.25);
+    animation: fadeInUp 0.8s ease;
+}
+
+.fridge-input {
+    padding: 25px;
+    background: linear-gradient(to right, var(--primary-light), var(--primary));
+    color: var(--white);
+}
+
+.fridge-input h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--dark);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.input-group input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.generate-btn {
+    background: linear-gradient(to right, var(--primary), var(--dark));
+    color: white;
+    border: none;
+    width: 100%;
+    max-width: 300px;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(76, 175, 80, 0.4);
+}
+
+.instructions {
+    padding: 25px;
+    background: var(--white);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--dark);
+    font-size: 1.3rem;
+}
+
+.instructions-list {
+    padding-left: 25px;
+}
+
+.instructions-list li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.instructions-list li:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.recipe-container {
+    display: none;
+    padding: 25px;
+    background: linear-gradient(to bottom right, #E8F5E9, #C8E6C9);
+    border-radius: 16px;
+    margin-top: 20px;
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recipe-title {
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+.difficulty {
+    background: rgba(76, 175, 80, 0.15);
+    color: var(--dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.recipe-ingredients {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.ingredient-list {
+    list-style: none;
+}
+
+.ingredient-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: center;
+}
+
+.ingredient-list li:last-child {
+    border-bottom: none;
+}
+
+.ingredient-list li i {
+    color: var(--primary);
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.has-ingredient i {
+    color: #4CAF50;
+}
+
+.missing-ingredient i {
+    color: #f44336;
+    text-decoration: line-through;
+}
+
+.recipe-instructions {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.instructions-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.tip {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--primary);
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+.no-recipe {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.no-recipe i {
+    font-size: 4rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.no-recipe h3 {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.decoration {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.decoration-1 {
+    top: 15%;
+    left: 5%;
+    font-size: 5rem;
+    transform: rotate(-15deg);
+    color: var(--primary);
+}
+
+.decoration-2 {
+    bottom: 15%;
+    right: 8%;
+    font-size: 4rem;
+    transform: rotate(10deg);
+    color: var(--primary-dark);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .fridge-input h2, .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .input-group input {
+        font-size: 1rem;
+        padding: 14px 15px;
+    }
+    
+    .generate-btn {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+    
+    .recipe-title {
+        font-size: 1.5rem;
+    }
+}

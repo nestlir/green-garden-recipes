@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Garden Recipe Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="decoration decoration-1">
+        <i class="fas fa-leaf"></i>
+    </div>
+    <div class="decoration decoration-2">
+        <i class="fas fa-seedling"></i>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-utensils"></i> Green Garden Recipes</h1>
+            <p>Tell us what's in your fridge and we'll suggest delicious, fresh recipes using your ingredients!</p>
+        </header>
+        
+        <div class="app-card">
+            <div class="fridge-input">
+                <h2><i class="fas fa-fridge"></i> What's in your fridge?</h2>
+                <div class="input-group">
+                    <input type="text" id="ingredientsInput" placeholder="eggs, tomatoes, basil, mozzarella..." value="eggs, tomatoes, basil, mozzarella, olive oil">
+                </div>
+                <button class="generate-btn" id="generateBtn">
+                    <i class="fas fa-magic"></i> Generate Recipes
+                </button>
+            </div>
+            
+            <div class="instructions">
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> How It Works</h2>
+                <ul class="instructions-list">
+                    <li>Enter the ingredients you have in your fridge (comma separated)</li>
+                    <li>Click "Generate Recipes" to see what you can make</li>
+                    <li>Recipes will show ingredients you have (green) and what you need to buy (red)</li>
+                    <li>Try different combinations for more recipe ideas!</li>
+                </ul>
+            </div>
+            
+            <div class="recipe-container" id="recipeContainer">
+                <!-- Recipe content will be dynamically inserted here -->
+            </div>
+            
+            <div class="no-recipe" id="noRecipe">
+                <i class="fas fa-search-minus"></i>
+                <h3>Not enough ingredients</h3>
+                <p>Try adding more ingredients to your fridge list to see recipe suggestions</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
