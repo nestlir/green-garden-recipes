@@ -64,4 +64,4 @@ The app automatically suggests recipes based on what you have in your fridge, sh
 ### Quick Start
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/green-garden-recipes.git
+   git clone https://github.com/yourusername/green-garden-recipes.git# green-garden-recipes
