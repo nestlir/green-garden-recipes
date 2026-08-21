@@ -1,67 +1,40 @@
-# 🥗 Green Garden Recipe Generator
+# Green Garden — Ingredient-to-Recipe Explorer
 
-<div align="center">
+> Responsive recipe discovery interface with a simple matching algorithm and clear cooking guidance.
 
-![Green Garden Recipe Generator](assets/images/127.0.0.1_5500_.png)
+## Product overview
 
-*A beautiful, intuitive web app that transforms your fridge ingredients into delicious recipes*
+Green Garden turns the ingredients available in a user's fridge into recipe suggestions. Instead of presenting a static recipe list, the interface explains what matches, what is missing and how to prepare the result.
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white)](https://fontawesome.com)
+## Key features
 
-</div>
+- ingredient input;
+- recipe matching by available ingredients;
+- minimum match threshold;
+- missing-ingredient highlighting;
+- difficulty and preparation time;
+- step-by-step instructions;
+- empty-result feedback;
+- responsive mobile-first layout;
+- animated interaction states.
 
-## 🌟 Key Features
+## Product thinking
 
-### 🎨 Fresh Green Color Scheme
-- **Calming shades of green** (#4CAF50, #8BC34A, #388E3C)
-- **Natural gradients** that evoke garden freshness
-- **Clean white backgrounds** with subtle green accents
-- **Modern, nature-inspired design**
+The strongest part of the project is the information hierarchy: the interface separates what the user already has from what they need to buy, turning a simple matching algorithm into an actionable cooking workflow.
 
-### 🖱️ Simple & Intuitive Interface
-- **Clear input field** for ingredients (pre-filled with sample data)
-- **Prominent "Generate Recipes" button** with hover animations
-- **Visual indicators** for ingredients you have vs. missing items
-- **Responsive design** that works perfectly on all devices
+## Stack
 
-### 📋 Smart Recipe Display
-- **Difficulty level** and **preparation time** for each recipe
-- **Ingredients clearly marked** with visual status indicators
-- **Step-by-step instructions** with helpful cooking tips
-- **Missing ingredients highlighted** for easy shopping lists
+**HTML5 · CSS3 · JavaScript · responsive UI · Font Awesome**
 
-### ✨ User Experience Enhancements
-- **Smooth animations** for all interactions
-- **Mobile-first responsive design**
-- **Helpful "How It Works"** section explaining the process
-- **Visual feedback** when no recipes match your ingredients
+## Run locally
 
-### 🍳 Practical Features
-- **Sample recipe database** with realistic ingredients
-- **Percentage-based matching algorithm** (shows recipes with at least 50% match)
-- **Pre-filled sample ingredients** for immediate use
-- **Clear visual distinction** between available and needed ingredients
+```bash
+git clone https://github.com/nestlir/green-garden-recipes.git
+cd green-garden-recipes
+```
 
-## 🚀 How It Works
+Open `index.html` or serve the directory with a static HTTP server.
 
-The app automatically suggests recipes based on what you have in your fridge, showing exactly which ingredients you need to buy:
+## Context
 
-1. **Enter Ingredients** → List what's in your fridge (comma separated)
-2. **Generate Recipes** → Click the magic button
-3. **Cook & Enjoy** → Follow the step-by-step instructions
-
-## 📸 Demo
-
-![App Demo](assets/images/127.0.0.1_5500_.png)
-
-*The app suggests recipes like Fresh Tomato Basil Omelette, Caprese Stuffed Tomatoes, and Tomato Basil Pasta based on your available ingredients.*
-
-## 🛠️ Installation & Usage
-
-### Quick Start
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/green-garden-recipes.git# green-garden-recipes
+Presented as a frontend/product case study focused on information design, interaction and turning simple business logic into a useful interface.
